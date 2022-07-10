@@ -1,3 +1,25 @@
 <resources>
 	<string name="app_name">Polyglotte</string>
+
+	<string-array name="android_versions">
+		<item>Android 1.5 — Cupcake</item>
+		<item>Android 1.6 — Donut</item>
+		<item>Android 2.0 — Eclair</item>
+		<item>Android 2.2 — Froyo</item>
+		<item>Android 2.3 — Gingerbread</item>
+		<item>Android 3.0 — Honeycomb</item>
+		<item>Android 4.0 — Ice Cream Sandwich</item>
+		<item>Android 4.1 — Jelly Bean</item>
+		<item>Android 4.4 — KitKat</item>
+		<item>Android 5.0 — Lollipop</item>
+		<item>Android 6.0 — Marshmallow</item>
+		<item>Android 7.0 — Nougat</item>
+		<item>Android 8.0 — Oreo</item>
+		<item>Android 9 — Pie</item>
+		<item>Android 10 — Quince Tart</item>
+		<item>Android 11 — Red Velvet Cake</item>
+		<item>Android 12 — Snow Cone</item>
+		<item>Android 13 — Tiramisu</item>
+
+	</string-array>
 </resources>
