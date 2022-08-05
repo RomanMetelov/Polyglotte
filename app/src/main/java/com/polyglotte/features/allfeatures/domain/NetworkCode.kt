@@ -1,4 +1,4 @@
-package com.polyglotte.menu.domain
+package com.polyglotte.features.allfeatures.domain
 
 import retrofit2.Response
 import retrofit2.Retrofit

@@ -27,7 +27,7 @@
 <!--	мб айтеми меню теж винести в стринг массив -->
 	<string name="title_cars">Cars</string>
 	<string name="title_crypto">Crypto</string>
-	<string name="title_menu">Menu</string>
+	<string name="title_all_features">All features</string>
 	<string name="title_sports">Sports</string>
 	<string name="title_stocks">Stocks</string>
 	<string name="waiting">waiting…</string>

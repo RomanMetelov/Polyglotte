@@ -1,13 +1,13 @@
-package com.polyglotte.cars.ui
+package com.polyglotte.features.crypto.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class CarsViewModel : ViewModel() {
+class CryptoViewModel : ViewModel() {
 
 	private val _text = MutableLiveData<String>().apply {
-		value = "This is cars Fragment"
+		value = "This is crypto Fragment"
 	}
 	val text: LiveData<String> = _text
 }

@@ -1,13 +1,13 @@
-package com.polyglotte.sports.ui
+package com.polyglotte.features.stocks.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SportsViewModel : ViewModel() {
+class StocksViewModel : ViewModel() {
 
 	private val _text = MutableLiveData<String>().apply {
-		value = "This is sports Fragment"
+		value = "This is stocks Fragment"
 	}
 	val text: LiveData<String> = _text
 }

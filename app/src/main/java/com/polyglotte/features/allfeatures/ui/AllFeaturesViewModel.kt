@@ -1,17 +1,17 @@
-package com.polyglotte.menu.ui
+package com.polyglotte.features.allfeatures.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.polyglotte.menu.domain.RetrofitHelper
-import com.polyglotte.menu.domain.TestApi
+import com.polyglotte.features.allfeatures.domain.RetrofitHelper
+import com.polyglotte.features.allfeatures.domain.TestApi
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 
-class MenuViewModel : ViewModel() {
+class AllFeaturesViewModel : ViewModel() {
 
 	private val _text = MutableLiveData<String>().apply {
-		value = "This is menu Fragment"
+		value = "This is all features Fragment"
 	}
 	val text: LiveData<String> = _text
 

@@ -4,31 +4,31 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:id="@+id/mobile_navigation"
-	app:startDestination="@+id/navigation_menu">
+	app:startDestination="@+id/navigation_all_features">
 
 	<fragment
 		android:id="@+id/navigation_cars"
-		android:name="com.polyglotte.cars.ui.CarsFragment"
+		android:name="com.polyglotte.features.cars.ui.CarsFragment"
 		android:label="@string/title_cars"
 		tools:layout="@layout/fragment_cars"/>
 	<fragment
 		android:id="@+id/navigation_crypto"
-		android:name="com.polyglotte.crypto.ui.CryptoFragment"
+		android:name="com.polyglotte.features.crypto.ui.CryptoFragment"
 		android:label="@string/title_crypto"
 		tools:layout="@layout/fragment_crypto"/>
 	<fragment
-		android:id="@+id/navigation_menu"
-		android:name="com.polyglotte.menu.ui.MenuFragment"
-		android:label="@string/title_menu"
-		tools:layout="@layout/fragment_menu"/>
+		android:id="@+id/navigation_all_features"
+		android:name="com.polyglotte.features.allfeatures.ui.AllFeaturesFragment"
+		android:label="@string/title_all_features"
+		tools:layout="@layout/fragment_all_features"/>
 	<fragment
 		android:id="@+id/navigation_sports"
-		android:name="com.polyglotte.sports.ui.SportsFragment"
+		android:name="com.polyglotte.features.sports.ui.SportsFragment"
 		android:label="@string/title_sports"
 		tools:layout="@layout/fragment_sports"/>
 	<fragment
 		android:id="@+id/navigation_stocks"
-		android:name="com.polyglotte.stocks.ui.StocksFragment"
+		android:name="com.polyglotte.features.stocks.ui.StocksFragment"
 		android:label="@string/title_stocks"
 		tools:layout="@layout/fragment_stocks"/>
 

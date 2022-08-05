@@ -1,4 +1,4 @@
-package com.polyglotte.crypto.ui
+package com.polyglotte.features.sports.ui
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -7,14 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.lifecycle.Observer
-import com.polyglotte.databinding.FragmentCryptoBinding
+import com.polyglotte.databinding.FragmentSportsBinding
 
-class CryptoFragment : Fragment() {
+class SportsFragment : Fragment() {
 
-	private lateinit var viewModel: CryptoViewModel
+	private lateinit var viewModel: SportsViewModel
 
-	private var _binding: FragmentCryptoBinding? = null
+	private var _binding: FragmentSportsBinding? = null
 	private val binding get() = _binding!!
 	// This property is only valid between onCreateView and onDestroyView.
 
@@ -22,13 +21,13 @@ class CryptoFragment : Fragment() {
 		inflater: LayoutInflater, container: ViewGroup?,
 		savedInstanceState: Bundle?
 	): View {
-		_binding = FragmentCryptoBinding.inflate(inflater, container, false)
+		_binding = FragmentSportsBinding.inflate(inflater, container, false)
 		return binding.root
 	}
 
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
-		viewModel = ViewModelProvider(this).get(CryptoViewModel::class.java)
+		viewModel = ViewModelProvider(this).get(SportsViewModel::class.java)
 		setupObservers()
 	}
 
@@ -45,6 +44,6 @@ class CryptoFragment : Fragment() {
 	}
 
 	companion object {
-		fun newInstance() = CryptoFragment()
+		fun newInstance() = SportsFragment()
 	}
 }

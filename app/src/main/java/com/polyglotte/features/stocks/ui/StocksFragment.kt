@@ -1,4 +1,4 @@
-package com.polyglotte.stocks.ui
+package com.polyglotte.features.stocks.ui
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.lifecycle.Observer
 import com.polyglotte.databinding.FragmentStocksBinding
 
 class StocksFragment : Fragment() {

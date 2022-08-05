@@ -13,9 +13,9 @@
 		android:title="@string/title_crypto"/>
 
 	<item
-		android:id="@+id/navigation_menu"
-		android:icon="@drawable/ic_menu_black_24dp"
-		android:title="@string/title_menu"/>
+		android:id="@+id/navigation_all_features"
+		android:icon="@drawable/ic_all_features_black_24dp"
+		android:title="@string/title_all_features"/>
 
 	<item
 		android:id="@+id/navigation_sports"

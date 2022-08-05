@@ -1,4 +1,4 @@
-package com.polyglotte.cars.ui
+package com.polyglotte.features.crypto.ui
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -7,14 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.lifecycle.Observer
-import com.polyglotte.databinding.FragmentCarsBinding
+import com.polyglotte.databinding.FragmentCryptoBinding
 
-class CarsFragment : Fragment() {
+class CryptoFragment : Fragment() {
 
-	private lateinit var viewModel: CarsViewModel
+	private lateinit var viewModel: CryptoViewModel
 
-	private var _binding: FragmentCarsBinding? = null
+	private var _binding: FragmentCryptoBinding? = null
 	private val binding get() = _binding!!
 	// This property is only valid between onCreateView and onDestroyView.
 
@@ -22,13 +21,13 @@ class CarsFragment : Fragment() {
 		inflater: LayoutInflater, container: ViewGroup?,
 		savedInstanceState: Bundle?
 	): View {
-		_binding = FragmentCarsBinding.inflate(inflater, container, false)
+		_binding = FragmentCryptoBinding.inflate(inflater, container, false)
 		return binding.root
 	}
 
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
-		viewModel = ViewModelProvider(this).get(CarsViewModel::class.java)
+		viewModel = ViewModelProvider(this).get(CryptoViewModel::class.java)
 		setupObservers()
 	}
 
@@ -45,6 +44,6 @@ class CarsFragment : Fragment() {
 	}
 
 	companion object {
-		fun newInstance() = CarsFragment()
+		fun newInstance() = CryptoFragment()
 	}
 }
