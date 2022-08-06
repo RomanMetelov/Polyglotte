@@ -7,20 +7,125 @@
 	app:startDestination="@+id/navigation_all_features">
 
 	<fragment
+		android:id="@+id/navigation_alarm"
+		android:name="com.polyglotte.features.alarm.ui.AlarmFragment"
+		android:label="@string/title_alarm"
+		tools:layout="@layout/fragment_alarm"/>
+	<fragment
+		android:id="@+id/navigation_algorithms"
+		android:name="com.polyglotte.features.algorithms.ui.AlgorithmsFragment"
+		android:label="@string/title_algorithms"
+		tools:layout="@layout/fragment_algorithms"/>
+	<fragment
+		android:id="@+id/navigation_all_features"
+		android:name="com.polyglotte.features.allfeatures.ui.AllFeaturesFragment"
+		android:label="@string/title_all_features"
+		tools:layout="@layout/fragment_all_features"/>
+	<fragment
+		android:id="@+id/navigation_anne_droid"
+		android:name="com.polyglotte.features.annedroid.ui.AnneDroidFragment"
+		android:label="@string/title_anne_droid"
+		tools:layout="@layout/fragment_anne_droid"/>
+	<fragment
+		android:id="@+id/navigation_books"
+		android:name="com.polyglotte.features.books.ui.BooksFragment"
+		android:label="@string/title_books"
+		tools:layout="@layout/fragment_books"/>
+	<fragment
 		android:id="@+id/navigation_cars"
 		android:name="com.polyglotte.features.cars.ui.CarsFragment"
 		android:label="@string/title_cars"
 		tools:layout="@layout/fragment_cars"/>
+	<fragment
+		android:id="@+id/navigation_circles"
+		android:name="com.polyglotte.features.circles.ui.CirclesFragment"
+		android:label="@string/title_circles"
+		tools:layout="@layout/fragment_circles"/>
 	<fragment
 		android:id="@+id/navigation_crypto"
 		android:name="com.polyglotte.features.crypto.ui.CryptoFragment"
 		android:label="@string/title_crypto"
 		tools:layout="@layout/fragment_crypto"/>
 	<fragment
-		android:id="@+id/navigation_all_features"
-		android:name="com.polyglotte.features.allfeatures.ui.AllFeaturesFragment"
-		android:label="@string/title_all_features"
-		tools:layout="@layout/fragment_all_features"/>
+		android:id="@+id/navigation_dates"
+		android:name="com.polyglotte.features.dates.ui.DatesFragment"
+		android:label="@string/title_dates"
+		tools:layout="@layout/fragment_dates"/>
+	<fragment
+		android:id="@+id/navigation_deutsch"
+		android:name="com.polyglotte.features.deutsch.ui.DeutschFragment"
+		android:label="@string/title_deutsch"
+		tools:layout="@layout/fragment_deutsch"/>
+	<fragment
+		android:id="@+id/navigation_english"
+		android:name="com.polyglotte.features.english.ui.EnglishFragment"
+		android:label="@string/title_english"
+		tools:layout="@layout/fragment_english"/>
+	<fragment
+		android:id="@+id/navigation_espanol"
+		android:name="com.polyglotte.features.espanol.ui.EspanolFragment"
+		android:label="@string/title_espanol"
+		tools:layout="@layout/fragment_espanol"/>
+	<fragment
+		android:id="@+id/navigation_finance"
+		android:name="com.polyglotte.features.finance.ui.FinanceFragment"
+		android:label="@string/title_finance"
+		tools:layout="@layout/fragment_finance"/>
+	<fragment
+		android:id="@+id/navigation_fitness"
+		android:name="com.polyglotte.features.fitness.ui.FitnessFragment"
+		android:label="@string/title_fitness"
+		tools:layout="@layout/fragment_fitness"/>
+	<fragment
+		android:id="@+id/navigation_francais"
+		android:name="com.polyglotte.features.francais.ui.FrancaisFragment"
+		android:label="@string/title_francais"
+		tools:layout="@layout/fragment_francais"/>
+	<fragment
+		android:id="@+id/navigation_handmade"
+		android:name="com.polyglotte.features.handmade.ui.HandmadeFragment"
+		android:label="@string/title_handmade"
+		tools:layout="@layout/fragment_handmade"/>
+	<fragment
+		android:id="@+id/navigation_holoughts"
+		android:name="com.polyglotte.features.holoughts.ui.HoloughtsFragment"
+		android:label="@string/title_holoughts"
+		tools:layout="@layout/fragment_holoughts"/>
+	<fragment
+		android:id="@+id/navigation_ministries"
+		android:name="com.polyglotte.features.ministries.ui.MinistriesFragment"
+		android:label="@string/title_ministries"
+		tools:layout="@layout/fragment_ministries"/>
+	<fragment
+		android:id="@+id/navigation_music"
+		android:name="com.polyglotte.features.music.ui.MusicFragment"
+		android:label="@string/title_music"
+		tools:layout="@layout/fragment_music"/>
+	<fragment
+		android:id="@+id/navigation_notes"
+		android:name="com.polyglotte.features.notes.ui.NotesFragment"
+		android:label="@string/title_notes"
+		tools:layout="@layout/fragment_notes"/>
+	<fragment
+		android:id="@+id/navigation_nutrition"
+		android:name="com.polyglotte.features.nutrition.ui.NutritionFragment"
+		android:label="@string/title_nutrition"
+		tools:layout="@layout/fragment_nutrition"/>
+	<fragment
+		android:id="@+id/navigation_scheduler"
+		android:name="com.polyglotte.features.scheduler.ui.SchedulerFragment"
+		android:label="@string/title_scheduler"
+		tools:layout="@layout/fragment_scheduler"/>
+	<fragment
+		android:id="@+id/navigation_self_improvement"
+		android:name="com.polyglotte.features.selfimprovement.ui.SelfImprovementFragment"
+		android:label="@string/title_self_improvement"
+		tools:layout="@layout/fragment_self_improvement"/>
+	<fragment
+		android:id="@+id/navigation_settings"
+		android:name="com.polyglotte.features.settings.ui.SettingsFragment"
+		android:label="@string/title_settings"
+		tools:layout="@layout/fragment_settings"/>
 	<fragment
 		android:id="@+id/navigation_sports"
 		android:name="com.polyglotte.features.sports.ui.SportsFragment"
@@ -31,5 +136,4 @@
 		android:name="com.polyglotte.features.stocks.ui.StocksFragment"
 		android:label="@string/title_stocks"
 		tools:layout="@layout/fragment_stocks"/>
-
 </navigation>
