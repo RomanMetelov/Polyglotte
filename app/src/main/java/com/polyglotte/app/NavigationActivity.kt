@@ -1,13 +1,14 @@
 package com.polyglotte.app
 
 import android.os.Bundle
+import android.view.Menu
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.polyglotte.R
+import com.polyglotte.app.navigation.BottomNavBarMenuItemsUseCase
 import com.polyglotte.databinding.ActivityNavigationBinding
 
 class NavigationActivity : AppCompatActivity() {
@@ -29,12 +30,19 @@ class NavigationActivity : AppCompatActivity() {
 		val navView: BottomNavigationView = binding.navView
 		val navController = binding.appNavHostFragment.getFragment<NavHostFragment>().navController
 
+		navView.menu.clear()
+
+		val topLevelDestinationsSet = mutableSetOf<Int>()
+
+		BottomNavBarMenuItemsUseCase().get().forEachIndexed { index, menuItem ->
+			navView.menu.add(Menu.NONE, menuItem.destinationId, index, menuItem.labelId).setIcon(menuItem.imageId)
+			topLevelDestinationsSet.add(menuItem.destinationId)
+		}
+
 		// Passing each menu ID as a set of Ids because each
 		// menu should be considered as top level destinations.
 		val appBarConfiguration = AppBarConfiguration(
-			setOf(
-				R.id.navigation_cars, R.id.navigation_crypto, R.id.navigation_all_features, R.id.navigation_sports, R.id.navigation_stocks
-			)
+			topLevelDestinationsSet.toSet()
 		)
 		setupActionBarWithNavController(navController, appBarConfiguration)
 		navView.setupWithNavController(navController)

@@ -47,3 +47,6 @@ class commented {
 //	//export data (whole data with voice record)
 //	//save
 /////////////////////////////////////////////////////////////////
+
+//setupToolbar() in each fragment
+//maybe create an extension function

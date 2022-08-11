@@ -8,7 +8,9 @@ import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.polyglotte.R
+import com.polyglotte.app.navigation.AllFeaturesList
 import com.polyglotte.databinding.FragmentAllFeaturesBinding
 
 class AllFeaturesFragment : Fragment() {
@@ -36,8 +38,6 @@ class AllFeaturesFragment : Fragment() {
 
 	override fun onDestroyView() {
 		super.onDestroyView()
-//		this.activity?.actionBar?.setDisplayShowHomeEnabled(true)
-		//why it's commented? do I need this code?
 		_binding = null
 	}
 
@@ -59,12 +59,20 @@ class AllFeaturesFragment : Fragment() {
 		menuHost.addMenuProvider(object : MenuProvider {
 			override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
 				// Add menu items here
-				menuInflater.inflate(R.menu.menu_toolbar, menu)
+				menu.clear()
+				val menuItem = AllFeaturesList.getFeaturesListItemByKey(R.string.title_settings)
+				menuItem?.run {
+					menu.add(Menu.NONE, menuItem.destinationId, index, menuItem.labelId)
+						.setIcon(menuItem.imageId)
+						.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
+				}
 			}
 
 			override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
 				// Handle the menu selection
-				return false
+				if (menuItem.itemId == R.id.navigation_settings)
+					findNavController().navigate(R.id.navigation_settings)
+				return true
 			}
 		}, viewLifecycleOwner, Lifecycle.State.RESUMED)
 	}
