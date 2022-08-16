@@ -1,8 +1,8 @@
-package com.polyglotte.app.navigation
+package com.polyglotte.app.data
 
 import android.view.Menu
 
-data class FeaturesListItem(
+data class AppFeaturesRepositoryItem(
 	var labelId: Int,
 	var imageId: Int,
 	var destinationId: Int,

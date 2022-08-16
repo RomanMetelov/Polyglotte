@@ -10,7 +10,8 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.polyglotte.R
-import com.polyglotte.app.navigation.AllFeaturesList
+import com.polyglotte.app.data.AppFeatureName
+import com.polyglotte.app.data.AppFeaturesRepository
 import com.polyglotte.databinding.FragmentAllFeaturesBinding
 
 class AllFeaturesFragment : Fragment() {
@@ -34,6 +35,10 @@ class AllFeaturesFragment : Fragment() {
 		viewModel = ViewModelProvider(this).get(AllFeaturesViewModel::class.java)
 		setupObservers()
 		setupAllFeaturesToolbarMenu()
+		//TODO
+		//or maybe in other commit?
+		//get from prefs
+		//setOnClickListeners (recycler view)
 	}
 
 	override fun onDestroyView() {
@@ -60,7 +65,7 @@ class AllFeaturesFragment : Fragment() {
 			override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
 				// Add menu items here
 				menu.clear()
-				val menuItem = AllFeaturesList.getFeaturesListItemByKey(R.string.title_settings)
+				val menuItem = AppFeaturesRepository.getFeaturesListItemByKey(AppFeatureName.SETTINGS)
 				menuItem?.run {
 					menu.add(Menu.NONE, menuItem.destinationId, index, menuItem.labelId)
 						.setIcon(menuItem.imageId)
