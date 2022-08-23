@@ -1,7 +1,10 @@
 package com.polyglotte.features.allfeatures.ui
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.*
+import android.widget.ArrayAdapter
 import android.widget.TextView
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
@@ -9,10 +12,15 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.polyglotte.R
+import com.polyglotte.app.NavigationActivity
 import com.polyglotte.app.data.AppFeatureName
 import com.polyglotte.app.data.AppFeaturesRepository
 import com.polyglotte.databinding.FragmentAllFeaturesBinding
+import com.polyglotte.features.allfeatures.FeaturesListAdapter
 
 class AllFeaturesFragment : Fragment() {
 
@@ -35,6 +43,7 @@ class AllFeaturesFragment : Fragment() {
 		viewModel = ViewModelProvider(this).get(AllFeaturesViewModel::class.java)
 		setupObservers()
 		setupAllFeaturesToolbarMenu()
+		setupRecyclerView()
 		//TODO
 		//or maybe in other commit?
 		//get from prefs
@@ -80,6 +89,19 @@ class AllFeaturesFragment : Fragment() {
 				return true
 			}
 		}, viewLifecycleOwner, Lifecycle.State.RESUMED)
+	}
+
+	private fun setupRecyclerView() {
+		val prefs: SharedPreferences? = activity?.getSharedPreferences(NavigationActivity.PREFERENCES_NAVIGATION, Context.MODE_PRIVATE)
+		val dataset = prefs?.run { viewModel.getItemsList(this) }
+		binding.list.run {
+			adapter = dataset?.let { FeaturesListAdapter(it) }
+			layoutManager = LinearLayoutManager(context)
+			addItemDecoration(
+				DividerItemDecoration(context, RecyclerView.VERTICAL)
+			)
+
+		}
 	}
 
 	companion object {
